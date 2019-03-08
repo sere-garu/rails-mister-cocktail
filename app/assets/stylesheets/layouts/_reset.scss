@@ -1,0 +1,41 @@
+li {
+  list-style: none;
+  font-size: 25px;
+}
+
+h1 h3 p {
+  color: $gray;
+}
+
+a {
+  color: $light-gray;
+  opacity: 0.8;
+  border-bottom: solid;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
+}
+
+#new_cocktail {
+  margin-top: 75px;
+}
+
+#new_dose {
+  margin-top: 75px;
+}
+
+.icon {
+  color: black;
+}
+
+.button-margin {
+  margin-top: 15px;
+}
+
+.main-container {
+  margin-left: 15px;
+  margin-top: 20px;
+}

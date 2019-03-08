@@ -8,11 +8,17 @@
     <p>Check your favorite cocktails recipe.</p>
     <%= link_to 'Create a new cocktail', new_cocktail_path, class: "btn-ghost" %>
   </div>
+  <div class="arrow bounce">
+  <a class="fa fa-arrow-down fa-2x" href="#scroll-end"></a>
+</div>
 </div>
 
-
+<div class="card-container" id="scroll-end" >
 <% @cocktails.each do |cocktail| %>
-<%= link_to cocktail.name, cocktail_path(cocktail), class: "card-category" %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,-5,0),rgba(0,0,0,15)), url(<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>);">
+  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+</div>
 <% end %>
+</div>
 
 

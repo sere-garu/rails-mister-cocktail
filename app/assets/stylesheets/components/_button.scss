@@ -1,6 +1,6 @@
 .btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: #F4F4F4;
+  border: 1px solid #F4F4F4;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
@@ -10,6 +10,9 @@
 
 .btn-ghost:hover {
   opacity: 1;
+  text-decoration: none;
+  color: #F4F4F4;
+
 }
 
 .btn-flat {
@@ -23,6 +26,7 @@
 .btn-flat:hover {
   background: #1BCB7F;
   color: white;
+  text-decoration: none;
 }
 
 .btn-gradient {

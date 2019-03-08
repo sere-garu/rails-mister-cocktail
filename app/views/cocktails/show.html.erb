@@ -1,16 +1,26 @@
 <!-- <h1>Cocktails#show</h1>
 <p>Find me in app/views/cocktails/show.html.erb</p> -->
-<h1><%= @cocktail.name %></h1>
-<%= link_to 'Add dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary'%>
-<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
-<h2>Ingredients</h2>
-<% @cocktail.doses.each do |dose| %>
-<li><%= Ingredient.find(dose.ingredient_id).name %> <%= " | " %> <%= dose.description %>
-  <%= link_to dose_path(dose, cocktail: Cocktail.find(params[:id])),
-  method: :delete, data: { confirm: "Are you sure?" } do %>
-  <i class="fas fa-trash-alt"></i>
+<div class="container">
+
+  <div class="header">
+    <h1><%= @cocktail.name %></h1>
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 300, crop: :fill %>
+  </div>
+
+  <div class="button-margin">
+    <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: 'btn-flat'%>
+  </div>
+
+  <h2>Ingredients</h2>
+  <% @cocktail.doses.each do |dose| %>
+  <li><%= Ingredient.find(dose.ingredient_id).name %> <%= " | " %> <%= dose.description %>
+    <%= link_to dose_path(dose, cocktail: Cocktail.find(params[:id])),
+    method: :delete, data: { confirm: "Are you sure?" } do %>
+    <i class="fas fa-trash-alt icon"></i>
+    <% end %>
+  </li>
   <% end %>
-</li>
-<% end %>
+
+</div>
 

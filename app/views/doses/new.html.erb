@@ -1,8 +1,13 @@
 <!-- <h1>Doses#new</h1>
 <p>Find me in app/views/doses/new.html.erb</p> -->
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient, prompt: "Choose an ingredient" %>
-  <%= f.input :description %>
-  <%= f.submit "Add ingredient", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+
+  <h1>Select the ingredient</h1>
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient, prompt: "Choose an ingredient" %>
+    <%= f.input :description, placeholder: 'How much do I need?'%>
+    <%= f.submit "Add ingredient", class: "btn-flat" %>
+  <% end %>
+</div>
