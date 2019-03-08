@@ -2,6 +2,7 @@
 <p>Find me in app/views/cocktails/show.html.erb</p> -->
 <h1><%= @cocktail.name %></h1>
 <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary'%>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
 <h2>Ingredients</h2>
 <% @cocktail.doses.each do |dose| %>
