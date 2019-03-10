@@ -11,13 +11,13 @@
   </head>
 
   <body>
-    <div class="big-container">
-      <% unless current_page?(cocktails_path) %>
+    <% unless current_page?(cocktails_path) %>
+      <div class="container">
         <%= link_to cocktails_path do%>
           <i class="fas fa-home icon"></i>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
     <%= yield %>
   <%= javascript_include_tag "application" %>
   <%= javascript_pack_tag "application" %>

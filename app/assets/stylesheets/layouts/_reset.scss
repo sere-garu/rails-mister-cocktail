@@ -10,7 +10,7 @@ h1 h3 p {
 a {
   color: $light-gray;
   opacity: 0.8;
-  border-bottom: solid;
+  border-bottom: solid $ligth-green;
 }
 
 a:hover {
@@ -39,3 +39,18 @@ a:hover {
   margin-left: 15px;
   margin-top: 20px;
 }
+
+.container {
+  margin-top: 35px;
+}
+
+#cocktail_photo {
+  font-size: 15px;
+  color: lightgrey;
+  display: flex;
+}
+
+.row {
+  margin: 0px;
+}
+

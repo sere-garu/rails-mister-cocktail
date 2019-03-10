@@ -6,9 +6,11 @@
   <h1> Add your own</h1>
 
   <%= simple_form_for [@cocktail] do |f| %>
-    <%= f.input :name, placeholder: 'Insert a name'%>
+    <%= f.input :name, placeholder: 'Insert your cocktail name'%>
     <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.input :photo_cache, as: :hidden%>
     <%= f.submit "Create cocktail", class: "btn-flat" %>
   <% end %>
 </div>
+
+
